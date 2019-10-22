@@ -7,6 +7,6 @@ node
   }
   stage('Deploy stage')
   {
-    sh 'sudo cp target/*.war /var/www/html/ '
+    sh 'sudo cp target/*.war /usr/share/tomcat/webapps/'
   }
 }
