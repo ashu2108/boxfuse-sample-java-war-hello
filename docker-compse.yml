@@ -1,0 +1,6 @@
+version: "3.3"
+services:
+  webapp:
+    image: assignment2
+    ports:
+     - "5000:8080"
