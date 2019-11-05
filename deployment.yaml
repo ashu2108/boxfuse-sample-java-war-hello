@@ -1,20 +1,18 @@
-apiVersion: apps/v1
+apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: boxfuse-deployment
+  name: boxfuse
   labels:
-    app: boxfuse-deployment
+    app: boxfuse
 spec:
   replicas: 1
-  selector:
-    matchLabels:
-      app: boxfuse
   template:
     metadata:
       labels:
         app: boxfuse
-  spec:
-    containers:
-        - name: boxfuse
-          image: ashutoshteknur21/assignment2
-    
+    spec:
+      containers:
+      - image: ashutoshteknur21/assignment2:latest
+        name: boxfuse
+        ports:
+        - containerPort: 8080
