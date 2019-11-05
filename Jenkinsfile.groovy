@@ -13,4 +13,9 @@ node {
         sh "sudo docker push ashutoshteknur21/assignment2:latest"
         sh "sudo docker-compose up -d"
     }
+    stage("Deployment"){
+       sh "sudo kubectl create -f deployment.yaml"
+       sh "sudo kubectl create -f service.yaml"
+    
+    }
 }
