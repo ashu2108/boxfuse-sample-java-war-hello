@@ -7,10 +7,10 @@ node {
         sh "cp /var/lib/jenkins/workspace/assigmnet1/target/*.war /var/lib/tomcat/webapps"
     }
     stage("Docker"){
-        sh "docker --version"
-        sh "docker build -t assignment2 ."
-        sh "docker tag assignment2:latest ashutoshteknur21/assignment2:latest"
-        sh "docker push ashutoshteknur21/assignment2:latest"
-        sh "docker-compose up -d"
+        sh "sudo docker --version"
+        sh "sudo docker build -t assignment2 ."
+        sh "sudo docker tag assignment2:latest ashutoshteknur21/assignment2:latest"
+        sh "sudo docker push ashutoshteknur21/assignment2:latest"
+        sh "sudo docker-compose up -d"
     }
 }
