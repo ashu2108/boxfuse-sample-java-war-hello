@@ -5,7 +5,16 @@ metadata:
   labels:
     app: boxfuse-deployment
 spec:
-  containers:
-      - name: boxfuse
-        image: ashutoshteknur21/assignment2
+  replicas: 1
+  selector:
+    matchLabels:
+      app: boxfuse
+  template:
+    metadata:
+      labels:
+        app: boxfuse
+  spec:
+    containers:
+        - name: boxfuse
+          image: ashutoshteknur21/assignment2
     
