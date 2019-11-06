@@ -14,8 +14,8 @@ node {
         sh "sudo docker-compose up -d"
     }
     stage("Deployment"){
-       sh "sudo kubectl create -f deployment.yaml"
-       sh "sudo kubectl create -f service.yaml"
+       sh "sudo kubectl apply -f deployment.yaml"
+       sh "sudo kubectl apply -f service.yaml"
     
     }
 }
